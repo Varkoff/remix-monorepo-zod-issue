@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2022",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": false,
+    "moduleResolution": "Node",
+    "resolveJsonModule": false,
+    "allowJs": false,
+    "composite": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "noEmit": false,
+    "lib": ["ES2023"],
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@goodcollect/shared/bookings": ["./bookings.ts"]
+    }
+  }
+}

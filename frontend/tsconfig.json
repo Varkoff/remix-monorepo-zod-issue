@@ -1,0 +1,40 @@
+{
+  "include": [
+    "env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "../playwright.config.ts",
+    "tailwind.config.cjs"
+  ],
+  "exclude": ["public/**", "build/**"],
+  "compilerOptions": {
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "isolatedModules": true,
+    "esModuleInterop": false,
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "target": "ES2022",
+    "strict": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["./app/components/*"],
+      "types/*": ["./app/types/*"],
+      "server/*": ["app/server/*"],
+      "schemas/*": ["./app/schemas/*"],
+      "utils/*": ["./app/utils/*"],
+      "routes/*": ["./app/routes/*"],
+      "hooks/*": ["./app/hooks/*"],
+      "public/*": ["./public/*"],
+      "styles/*": ["./app/styles/*"]
+    },
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "typeRoots": ["./types", "./node_modules/@types"]
+  }
+}

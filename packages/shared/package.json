@@ -1,0 +1,21 @@
+{
+  "name": "@virgile/shared",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "dist/auth.js",
+  "types": "dist/auth.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --build --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@conform-to/zod": "^1.1.0",
+    "zod": "^3.22.4"
+  }
+}

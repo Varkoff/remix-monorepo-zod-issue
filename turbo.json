@@ -1,0 +1,28 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env", "**/.env*"],
+  "globalDotEnv": [".env"],
+  "pipeline": {
+    "build": {
+      "cache": false,
+      "outputs": ["frontend/build/**", "packages/shared/dist/**"],
+      "dependsOn": ["^build"]
+    },
+    "lint": {
+      "cache": false,
+      "outputs": ["frontend/src/**", "packages/shared/src/**"],
+      "dependsOn": ["^lint"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "typecheck": {
+      "cache": false
+    },
+    "test:e2e": {
+      "outputs": ["playwright-report/**", "test-results/**"],
+      "dependsOn": ["^build"]
+    }
+  }
+}

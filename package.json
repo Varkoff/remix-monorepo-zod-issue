@@ -1,0 +1,31 @@
+{
+  "name": "monorepo",
+  "private": true,
+  "workspaces": ["frontend", "packages/*"],
+  "scripts": {
+    "build": "turbo build",
+    "copy-env": "cp .env backend/.env",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "start": "cd backend && npm run start",
+    "typecheck": "turbo typecheck",
+    "format": "npx @biomejs/biome format ./ --write",
+    "clean-turbo-cache": "rm -rf .turbo **/.turbo",
+    "clean-node-modules": "rm -rf {node_modules,package-lock.json} **/{node_modules,package-lock.json}"
+  },
+  "dependencies": {
+    "@remix-run/node": "^2.8.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "npm-run-all": "^4.1.5",
+    "turbo": "^1.13.2"
+  },
+  "packageManager": "npm@10.2.3",
+  "engines": {
+    "node": ">=18"
+  },
+  "overrides": {
+    "rollup": "4.15.0"
+  }
+}

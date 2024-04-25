@@ -1,0 +1,5 @@
+{
+  "{src,test}/**/*.ts": ["npx @biomejs/biome lint ./ "],
+  "./**/*.{ts,tsx}": ["npx @biomejs/biome format ./ --write"],
+  "package.json": ["npx -y sort-package-json"]
+}

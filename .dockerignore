@@ -1,0 +1,52 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+dist
+
+playwright-report
+test-results
+.husky
+.github
+.env
+.env.example
+.eslintrc.js
+# .gitignore
+.lintstagedrc.json
+docker-compose*.yaml
+Dockerfile
+playwright.config.ts
+README.md
+# redis.config
+vitest.config.ts
+
+# FRONTEND
+frontend/node_modules
+frontend/*.log
+frontend/.DS_Store
+frontend/.env
+frontend/.cache
+frontend/public/build
+frontend/build
+
+# BACKEND
+backend/Dockerfile
+backend/.dockerignore
+backend/node_modules
+backend/npm-debug.log
+backend/dist
+backend/*.env
+backend/DS_Store
+backend/.gitignore
+backend/.husky
+backend/.lintstagedrc.json
+backend/.prettierignore
+backend/.prettierrc
+backend/docker-compose*
+
+packages/eslint-config/node_modules
+packages/typescript-config/node_modules
+packages/shared/dist
+
+.turbo
+out/
